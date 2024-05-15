@@ -1,2 +1,3 @@
 # Minesweeper-API
- Small REST API for learning
+ Small REST API for testing stuff.
+
