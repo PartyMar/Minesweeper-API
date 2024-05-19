@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "z+2n3B7csfZz3+vO2E4JnHd6qdBEAOzdqpX5JMm/1xO3J17twsFFYvS81ZmmblOnsJt4K5yZd9wR1ANWO40TuA==",
+  "success": true,
+  "projectFilePath": "D:\\doingStuff\\API\\Minesweeper-API\\minesweeper\\minesweeper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JustA\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\JustA\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\JustA\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\JustA\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\JustA\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\JustA\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
