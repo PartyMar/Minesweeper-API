@@ -1,6 +1,0 @@
-@minesweeper_HostAddress = http://localhost:7266
-
-post {{minesweeper_HostAddress}}/new
-Accept: application/json
-
-###
