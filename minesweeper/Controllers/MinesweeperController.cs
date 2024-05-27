@@ -1,7 +1,6 @@
-
-
 using Microsoft.AspNetCore.Mvc;
 using minesweeper.Models.Requests;
+using minesweeper.Services;
 
 namespace minesweeper.Controllers
 {
@@ -9,7 +8,12 @@ namespace minesweeper.Controllers
     [Route("")]
     public class MinesweeperController : ControllerBase
     {
+        private readonly IGameService _gameService;
 
+        public MinesweeperController(IGameService gameService)
+        {
+            _gameService = gameService;
+        }
 
         [HttpPost]
         [Route("/new")]
@@ -21,15 +25,14 @@ namespace minesweeper.Controllers
                 int height = request.Height;
                 int minesCount = request.Mines_count;
 
-                string newId = GameLogic.GenerateGameId();
-                await GameLogic.NewGameVariables(newId, width, height, minesCount);
-                var obj = GameLogic.GetVariables();
+                var obj = await _gameService.NewGame(width, height, minesCount);
 
                 return Ok(obj);
             }
             catch (Exception ex)
             {
-                return BadRequest(new { error = "Произошла непредвиденная ошибка" });
+                string errorMessage = ex.Message;
+                return BadRequest(new { error = errorMessage });
             }
         }
 
@@ -39,20 +42,19 @@ namespace minesweeper.Controllers
         {
             try
             {
-                //var id = request.Game_id;
+                var id = request.Game_id;
                 var col = request.Col;
                 var row = request.Row;
 
-                await GameLogic.CheckField(col, row);
+                await _gameService.CheckField(col, row, id);
 
-                var obj =  GameLogic.GetVariables();
+                var obj = _gameService.GetVariables(id);
 
                 return Ok(obj);
             }
             catch (Exception ex)
             {
                 string errorMessage = ex.Message;
-
                 return BadRequest(new { error = errorMessage });
             }
         }

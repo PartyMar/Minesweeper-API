@@ -2,7 +2,7 @@
 {
     public class CheckFieldRequest
     {
-       // public string Game_id { get; set; }
+        public string? Game_id { get; set; }
         public int Col { get; set; }
         public int Row { get; set; }
     }
